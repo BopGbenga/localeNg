@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel watch-ts watch-server",
-    "start": "node dist/app.js",
+    "start": "npm run build && node dist/app.js",
+    "build": "tsc",
     "watch-ts": "tsc -w",
     "watch-server": "nodemon dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
